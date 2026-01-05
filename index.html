@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกมฟุตบอล 2 คน</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="scoreboard">
+            <div class="score-left">
+                <div class="player-label">ผู้เล่น 1 (WASD)</div>
+                <div class="score" id="score-left">0</div>
+            </div>
+            <div class="score-center">
+                <div class="game-title">Football</div>
+                <div class="half-indicator" id="half-indicator">1/2</div>
+                <div class="timer" id="timer">1:30</div>
+                <div class="game-status" id="game-status"></div>
+            </div>
+            <div class="score-right">
+                <div class="player-label">ผู้เล่น 2 (Arrow)</div>
+                <div class="score" id="score-right">0</div>
+            </div>
+        </div>
+        <div style="position: relative; display: inline-block;">
+            <canvas id="gameCanvas"></canvas>
+            <div class="goal-message" id="goal-message"></div>
+            <div class="countdown-message" id="countdown-message"></div>
+            <div class="winner-overlay" id="winner-overlay">
+                <div class="winner-content">
+                    <div class="winner-title" id="winner-title">ผู้เล่น 1 ชนะ!</div>
+                    <div class="winner-scores">
+                        <div class="winner-score-item">
+                            <div class="winner-player">ผู้เล่น 1</div>
+                            <div class="winner-score-value" id="winner-score-left">0</div>
+                        </div>
+                        <div class="winner-vs">VS</div>
+                        <div class="winner-score-item">
+                            <div class="winner-player">ผู้เล่น 2</div>
+                            <div class="winner-score-value" id="winner-score-right">0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item" id="timeline-half1">
+                <div class="timeline-dot"></div>
+                <div class="timeline-label">ครึ่งแรก</div>
+            </div>
+            <div class="timeline-line"></div>
+            <div class="timeline-item" id="timeline-ht">
+                <div class="timeline-dot"></div>
+                <div class="timeline-label">พักครึ่ง</div>
+            </div>
+            <div class="timeline-line"></div>
+            <div class="timeline-item" id="timeline-half2">
+                <div class="timeline-dot"></div>
+                <div class="timeline-label">ครึ่งหลัง</div>
+            </div>
+            <div class="timeline-line"></div>
+            <div class="timeline-item" id="timeline-ot">
+                <div class="timeline-dot"></div>
+                <div class="timeline-label">ET</div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
